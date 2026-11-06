@@ -872,7 +872,7 @@ int main(void) {
     const int screenHeight = 720;
     InitWindow(screenWidth, screenHeight, "raylib - sdf collision");
 
-    Shader shader = LoadShader(0, TextFormat("resources/sdf.glsl", 0));
+    Shader shader = LoadShader("resources/sdf.vs", "resources/sdf.fs");
     int resolutionLoc = GetShaderLocation(shader, "u_resolution");
     int shapeType0Loc = GetShaderLocation(shader, "u_shapeType0");
     int shapeType1Loc = GetShaderLocation(shader, "u_shapeType1");
