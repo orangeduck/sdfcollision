@@ -18,6 +18,8 @@ extern "C"
 #include <initializer_list>
 #include <functional>
 
+////////////////////////////
+
 static int shapeType0;
 static int shapeType1;
 static Vector2 shapePos0;
@@ -28,6 +30,8 @@ static float shapeScale0;
 static float shapeScale1;
 static float shapeMargin0;
 static float shapeMargin1;
+
+////////////////////////////
 
 float signf(float x)
 {
@@ -70,6 +74,8 @@ Vector2 Vector2SubtractFloat(Vector2 x, float y)
     x.y -= y;
     return x;
 }
+
+////////////////////////////
 
 float sdHeart(Vector2 p)
 {
@@ -273,6 +279,8 @@ Vector2 normalShape1(Vector2 p)
         sdShape1(Vector2Add(p, (Vector2){ 0.0f, eps })) - sdShape1(Vector2Subtract(p, (Vector2){ 0.0f, eps })),
     });
 }
+
+////////////////////////////
 
 typedef struct Bound
 {
@@ -492,6 +500,8 @@ Rectangle BoundScreenRectangle(Bound b)
     
     return (Rectangle){ posx, posy, width, height };
 }
+
+////////////////////////////
 
 void DrawBound(Bound b, Color color, float thickness)
 {
